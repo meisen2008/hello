@@ -1,0 +1,16 @@
+{
+    "name": "meisen/hello",
+    "description": "hello test package",
+    "authors": [
+        {
+            "name": "meisen",
+            "email": "meisen@qq.com"
+        }
+    ],
+    "autoload": {        
+        "psr-4": {
+            "Hello\\": "src/Hello"
+        }
+    },
+    "require": {}
+}
