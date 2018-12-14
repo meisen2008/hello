@@ -16,10 +16,8 @@ class Httpcurl{
 
 	public function __call($name,$arguments)
 	{
-		echo $name."不存在33"."<br/>";
-		var_dump($arguments);
-		$goods = new goods();
-		call_user_func_array([$goods,$name], $arguments);
+		$httpcurl = new Httpcurl();
+		call_user_func_array([$httpcurl,$name], $arguments);
 
 	}
 
