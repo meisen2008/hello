@@ -115,7 +115,7 @@ class Httpcurl{
     if ($errno = curl_errno($ch)) {
         $error   = curl_error($ch);
         $log_str = "Error at $action (errno:$errno, error:$error)";
-        Log::write($log_str);
+        //Log::write($log_str);
         // return false;
     }
 
@@ -125,7 +125,7 @@ class Httpcurl{
     $url_log   = $url != $last_url ? ", url:$last_url" : '';
     if ($http_code != 200) {
         $log_str = "Error at HTTP_STATUS $url (http_code:$http_code {$url_log})";
-        Log::write($log_str);
+        //Log::write($log_str);
     }
 
     curl_close($ch);
