@@ -5,7 +5,7 @@ class Download
 {
     public static function downLoadFilepath($file_name)
     {
-        $file_name = "test.csv";
+        //$file_name = "test.csv";
         $contents = file_get_contents($file_name);
         $file_size = filesize($file_name);
         header("Content-type: application/octet-stream;charset=utf-8");
@@ -29,7 +29,7 @@ class Download
     public static function downLoadFilelink($url)
     {
         $re = new Httpcurl();
-        $url = 'http://test.thinkphpdemo.com/phptest/download.php';
+        //$url = 'http://test.thinkphpdemo.com/phptest/download.php';
         $contents = $re->http($url);
         $file_name = 'hehe.csv';
         $file_size = strlen($contents);
