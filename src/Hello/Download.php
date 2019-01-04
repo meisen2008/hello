@@ -39,4 +39,13 @@ class Download
         header("Content-Disposition: attachment; filename=" . $file_name);
         exit($contents);
     }
+
+    public static function readPicture($path)
+    {
+        $img_info = getimagesize($path);
+        $mime = $img_info['mime'];
+        @ header("Content-Type:{$mime}");
+        $contents = file_get_contents($path);
+        exit($contents);
+    }
 }
